@@ -1,0 +1,95 @@
+.btn-outline-orange {
+  color: orangered;
+  border-color: orangered;
+}
+
+.btn-outline-orange:hover {
+  color: white;
+  background-color: orangered;
+  border-color: orangered;
+}
+
+
+/* Estilos para el párrafo de la descripción del producto */
+.descripcion {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555; /* Color de texto principal */
+  text-align: justify;
+  margin-top: 20px;
+  padding: 10px; /* Añade un padding para espacio interno */
+  border: 1px solid #ccc; /* Añade borde para separación visual */
+  border-radius: 8px; /* Añade bordes redondeados */
+  background-color: #f9f9f9; /* Color de fondo para destacar el texto */
+}
+
+.descripcion::first-letter {
+  font-size: 2rem; /* Tamaño de la primera letra */
+  color: #007bff; /* Color de la primera letra */
+  float: left; /* Flotar la primera letra a la izquierda */
+  padding-right: 5px; /* Espacio después de la primera letra */
+  font-family: Georgia, serif; /* Fuente de la primera letra */
+  margin-right: 5px; /* Margen derecho para separar la primera letra del texto */
+}
+
+
+.product-detail {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.product-image {
+  flex: 1;
+  padding: 20px;
+}
+
+.product-info {
+  flex: 2;
+  padding: 20px;
+}
+
+.product-title {
+  font-size: 2em;
+  color: #333;
+}
+
+.product-price {
+  font-size: 1.5em;
+  color: red;
+  margin-top: 10px;
+}
+
+.product-features {
+  list-style: none;
+  padding: 0;
+}
+
+.product-features li {
+  font-size: 1em;
+  color: #666;
+  margin-top: 5px;
+}
+
+.product-warranty,
+.product-condition {
+  font-size: 1em;
+  color: #666;
+  margin-top: 10px;
+}
+
+.buy-button {
+  background-color: #ff0000;
+  color: white;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.buy-button:hover {
+  background-color: #e60000;
+}
+

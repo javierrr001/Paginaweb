@@ -1,0 +1,19 @@
+
+<div class="product-detail">
+  <div class="product-image text-center">
+    <img [src]="producto.img" class="img-fluid rounded shadow-lg" [alt]="producto.nombre">
+    <a href="/productos" class="btn btn-outline-orange btn-lg btn-block mt-4">Regresar</a>
+  </div>
+  <div class="product-info">
+    <h1 class="product-title">{{ producto.nombre }}</h1>
+    <h2 class="product-price"> {{ producto.precio | currency:'Bs ':'symbol-narrow' }}</h2>
+
+    <ul class="product-features">
+      <li>{{ producto.descripcion }}</li>
+      <!-- Agrega más características según sea necesario -->
+    </ul>
+    <p class="product-warranty">Garantía: 1 año</p>
+    <p class="product-condition">Producto: Nuevo</p>
+    <button class="buy-button">Comprar por Whatsapp</button>
+  </div>
+</div>
