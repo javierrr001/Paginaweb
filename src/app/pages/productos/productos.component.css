@@ -1,0 +1,11 @@
+.btn-orangered {
+    color: orangered; /* Color del texto */
+    border-color: orangered; /* Color del borde */
+  }
+  
+  .btn-orangered:hover {
+    color: white; /* Color del texto al hacer hover */
+    background-color: orangered; /* Color de fondo al hacer hover */
+    border-color: orangered; /* Color del borde al hacer hover */
+  }
+  

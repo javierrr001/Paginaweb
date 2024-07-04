@@ -1,73 +1,79 @@
+
 <div class="container">
-  <div class="row">
-    <div class="col-md-8">
-      <h4>Contactos</h4>
-      <hr>
-      <form autocomplete="off" (ngSubmit)="guardar(forma)" #forma="ngForm">
-        <div class="form-group row">
-          <label class="col-2 col-form-label">Nombre</label>
-          <div class="col-8">
-            <input class="form-control" type="text" name="nombre" placeholder="Nombre"
-                   [class.is-invalid]="nombre.invalid && nombre.touched" [ngModel]="usuario.nombre" required minlength="5"
-                   #nombre="ngModel">
-            <small *ngIf="nombre.invalid && nombre.touched" class="form-text text-danger">Ingrese 5 letras</small>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-2 col-form-label">Email</label>
-          <div class="col-8">
-            <input class="form-control" type="email" name="email" placeholder="Correo electrónico"
-                   [class.is-invalid]="email.invalid && email.touched" [ngModel]="usuario.email"
-                   pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required #email="ngModel">
-            <small *ngIf="email.invalid && email.touched" class="form-text text-danger">El correo es obligatorio</small>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-2 col-form-label">Teléfono</label>
-          <div class="col-8">
-            <input class="form-control" type="text" name="telefono" placeholder="Teléfono"
-                   [class.is-invalid]="telefono.invalid && telefono.touched" [ngModel]="usuario.telefono" required minlength="10"
-                   #telefono="ngModel">
-            <small *ngIf="telefono.invalid && telefono.touched" class="form-text text-danger">Ingrese un número válido</small>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-2 col-form-label">Asunto</label>
-          <div class="col-8">
-            <textarea class="form-control" name="asunto" placeholder="Asunto"
-                      [class.is-invalid]="asunto.invalid && asunto.touched" [ngModel]="usuario.asunto" required minlength="10"
-                      #asunto="ngModel"></textarea>
-            <small *ngIf="asunto.invalid && asunto.touched" class="form-text text-danger">El asunto es obligatorio</small>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-2 col-form-label">Fecha de Registro</label>
-          <div class="col-8">
-            <input class="form-control" type="date" name="fecharegistro" placeholder="Fecha de Registro"
-                   [class.is-invalid]="fecharegistro.invalid && fecharegistro.touched" [ngModel]="usuario.fecharegistro" required
-                   #fecharegistro="ngModel">
-            <small *ngIf="fecharegistro.invalid && fecharegistro.touched" class="form-text text-danger">La fecha de registro es obligatoria</small>
-          </div>
-        </div>
-        <div class="form-group row">
-            <label class="col-2 col-form-label">Estado de Registro</label>
-            <div class="col-8">
-                <input type="checkbox" name="estadoregistro" [ngModel]="usuario.estadoregistro" #estadoregistro="ngModel">
-                Activo
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Formulario -->
+        <h4>Contactos </h4>
+        <hr>
+        <form autocomplete="off" (ngSubmit)="guardar(forma)" #forma="ngForm">
+          <div>
+            <div class="form-group row">
+              <label class="col-2 col-form-label">Nombre</label>
+              <div class="col-8">
+                <input class="form-control" type="text" name="nombre" placeholder="Nombre"
+                       [class.is-invalid]="nombre.invalid && nombre.touched" [(ngModel)]="pacienteModel.nombre" required minlength="3"
+                       #nombre="ngModel">
+                <small *ngIf="nombre.invalid && nombre.touched" class="form-text text-danger">Ingrese su nombre </small>
+              </div>
             </div>
-        </div>
-        <div class="form-group row">
-          <label class="col-2 col-form-label">&nbsp;</label>
-          <div class="input-group col-md-8">
-            <button type="submit" class="btn btn-outline-orange btn-block">Guardar</button>
-            <button type="button" class="btn btn-success btn-block" (click)="abrirWhatsApp()">Contactar por WhatsApp</button>
+            <div class="form-group row">
+              <label class="col-2 col-form-label">Email</label>
+              <div class="col-8">
+                <input class="form-control" type="email" name="email" placeholder="Correo electrónico"
+                       [class.is-invalid]="email.invalid && email.touched" [(ngModel)]="pacienteModel.email" required
+                       #email="ngModel">
+                <small *ngIf="email.invalid && email.touched" class="form-text text-danger">El correo es obligatorio</small>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-2 col-form-label">Teléfono</label>
+              <div class="col-8">
+                <input class="form-control" type="text" name="telefono" placeholder="Teléfono"
+                       [class.is-invalid]="telefono.invalid && telefono.touched" [(ngModel)]="pacienteModel.telefono" required
+                       #telefono="ngModel">
+                <small *ngIf="telefono.invalid && telefono.touched" class="form-text text-danger">Ingrese su telefono</small>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-2 col-form-label">Asunto</label>
+              <div class="col-8">
+                <input class="form-control" type="text" name="asunto" placeholder="Asunto"
+                       [class.is-invalid]="asunto.invalid && asunto.touched" [(ngModel)]="pacienteModel.asunto" required minlength="2"
+                       #asunto="ngModel">
+                <small *ngIf="asunto.invalid && asunto.touched" class="form-text text-danger">El asunto es  obligatorio</small>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-2 col-form-label">Fecha de Registro</label>
+              <div class="col-8">
+                <input class="form-control" type="date" name="fecharegistro" placeholder="Fecha de Registro"
+                       [class.is-invalid]="fecharegistro.invalid && fecharegistro.touched" [(ngModel)]="pacienteModel.fecharegistro"
+                       required #fecharegistro="ngModel">
+                <small *ngIf="fecharegistro.invalid && fecharegistro.touched" class="form-text text-danger">La fecha es obligatoria</small>
+              </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-2 col-form-label">Estado de Registro</label>
+                <div class="col-8">
+                  <input type="checkbox" name="estadoregistro" [(ngModel)]="pacienteModel.estadoregistro" #estadoregistro="ngModel"> Activo
+                </div>
+              </div>
           </div>
-        </div>
-      </form>
-    </div>
-    <div class="col-md-4">
-      <h4>Ubicación</h4>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d486364.66200243676!2d-63.01163445!3d-17.757642900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e81ca7c01a63%3A0x5c8b0a53a467611b!2sSanta%20Cruz%20de%20la%20Sierra!5e0!3m2!1ses-419!2sbo!4v1719767874858!5m2!1ses-419!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="form-group row">
+            <label class="col-2 col-form-label">&nbsp;</label>
+            <div class="input-group col-md-8">
+              <button type="submit" class="btn btn-outline btn-block">Guardar</button>
+              <button type="button" class="btn btn-success btn-block" (click)="abrirWhatsApp()">Contactar por WhatsApp</button>
+            </div>
+          </div>
+        </form>
+       
+      </div>
+      <div class="col-md-6">
+        <!-- Ubicación -->
+        <h4>Ubicación</h4>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d486364.66200243676!2d-63.01163445!3d-17.757642900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93f1e81ca7c01a63%3A0x5c8b0a53a467611b!2sSanta%20Cruz%20de%20la%20Sierra!5e0!3m2!1ses-419!2sbo!4v1719935898493!5m2!1ses-419!2sbo" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
   </div>
-</div>
+  

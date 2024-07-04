@@ -73,7 +73,7 @@ export class ProductosService{
             descripcion: "Procesador: AMD Ryzen 7 7730U 2.xGHz/4.5GHz, 8 núcleos, 16 hilos, Smartcaché 16MB, Disco sólido SSD: M.2 1TB, Memoria RAM: 32GB DDR4, Pantalla: 15.6\" FHD, Gráficos: AMD Radeon Graphics, Puertos: 2 USB 3.0, HDMI, Tipo C, Teclado: español, Conector combinado con auriculares/micrófono, Bluetooth 5.0, Webcam, Batería: Iones de litio de 3 celdas y 41 Wh"
         },
         { 
-            nombre: "Laptops HP Victus 16.1", 
+            nombre: "Laptops HP Victus 16.1  Core i7 13700H 3.7GHz", 
             img: "https://mipclista.com/5346-home_default/laptop-hp-victus-156-core-i5-13th.jpg",
             precio:3500,
              descripcion: "Laptop Intel Core i7 13700H 3.7GHz (Turbo 5.0GHz) 14 núcleos, 20 hilos, Disco Sólido SSD M.2 2TB, Memoria RAM 32GB DDR5 (4800MHz), Pantalla FHD 16.1'' (1920x1080) 144Hz, Tarjeta Video GeForce RTX 4070 8GB GDDR6, Teclado iluminado inglés, Webcam HD 720p, Windows 11 Home, 1x HDMI 2.1, 3x USB Tipo A 3.1 Gen 1, 1x USB Tipo C 3.1 Gen 1, 1x RJ45, Wifi 6E AX211 (Gig+), Bluetooth 5.3, Batería 6 celdas"
@@ -114,6 +114,7 @@ export class ProductosService{
             precio: 150,
             descripcion: "Material: ABS, Funciones: Built-in Microphone, Full HD camera, Tipo de conexión: USB, Sensor: CMOS, Formatos de video: AVI, Formatos de foto: BMP, JPG, Resolución: 3840 x 2560P, Longitud del cable: 1.5m, Formato de salida: M-JPEG, Control de parpadeo: 50Hz, Sistemas compatibles: Windows 2000/XP, Vista, Win7/Win8/Win10, Mac OS, Linux"
         },
+        
     ];
     
     getProductos(): Producto[]

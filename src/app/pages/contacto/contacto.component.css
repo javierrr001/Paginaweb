@@ -14,13 +14,11 @@ form {
     background-color: #f9f9f9;
   }
   
-  /* Estilo para las etiquetas */
   label {
     font-weight: bold;
     color: #333;
   }
   
-  /* Estilo para los inputs */
   input[type="text"], input[type="email"], input[type="date"], input[type="password"] {
     width: 100%;
     padding: 10px;
@@ -29,7 +27,6 @@ form {
     box-sizing: border-box;
   }
   
-  /* Estilo para los mensajes de error */
   .form-text.text-danger {
     color: #d9534f;
   }
@@ -62,19 +59,18 @@ form {
     margin-right: 10px;
   }
   
-  /* Estilo para alinear el checkbox con el label */
+
   .form-group.row {
     align-items: center;
   }
-
-  .btn-outline-orange {
+  
+  .btn-outline{
     color: orangered;
     border-color: orangered;
   }
-  .btn-outline-orange:hover {
+  
+  .btn-outline{
     color: white;
     background-color: orangered;
     border-color: orangered;
   }
-  
-  

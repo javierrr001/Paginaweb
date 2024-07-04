@@ -15,7 +15,7 @@ export const routes: Routes = [
     {path: `buscar/:termino`,component:CardbuscadorComponent},
     {path:`inicio`,component:InicioComponent},
     {path:`acerca-de-nosotros`,component:AcercaDeNosotrosComponent},
-    {path:`contacto`,component:ContactoComponent},
+     {path:`contacto`,component:ContactoComponent},
     {path:`**`,component:InicioComponent},
     
 ];
